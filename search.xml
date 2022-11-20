@@ -9,6 +9,8 @@
 <p>然后依次执行命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <h2 id="已发布文章删除"><a href="#已发布文章删除" class="headerlink" title="已发布文章删除"></a>已发布文章删除</h2><p>如果你已经将文章git发布了，此时会在本地创建一个名为 <code>.deploy_git</code>的文件夹，并将生成的文件复制到该文件夹。</p>
 <p>你需要删除本地的文章后，再删除 <code>.deploy_git</code>文件夹。</p>
 <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221120143415272.png" alt="image-20221120143415272" style="zoom:67%;" />
