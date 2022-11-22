@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2022-11-22T03:56:26.071Z</updated>
+  <updated>2022-11-22T12:57:33.281Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决配置正确虚拟机与主机ping不通</title>
+    <link href="https://example.com/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/"/>
+    <id>https://example.com/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/</id>
+    <published>2022-11-22T12:55:24.000Z</published>
+    <updated>2022-11-22T12:57:33.281Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p><p><img src="https://img-blog.csdn.net/20180804161629600?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p><img src="https://img-blog.csdn.net/20180804161655395?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;一-VMware设置桥接模式&quot;&gt;&lt;a href=&quot;#一-VMware设置桥接模式&quot; class=&quot;headerlink&quot; title=&quot;一.VMware设置桥接模式&quot;&gt;&lt;/a&gt;一.VMware设置桥接模式&lt;/h1&gt;&lt;p&gt;1.VMware -&amp;gt; 编辑-&amp;gt;</summary>
+      
+    
+    
+    
+    <category term="linux实验" scheme="https://example.com/categories/linux%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="linux" scheme="https://example.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>添加鼠标右键菜单项</title>
