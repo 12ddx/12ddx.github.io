@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2022-11-22T12:57:33.281Z</updated>
+  <updated>2022-11-22T13:04:32.547Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://example.com/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/"/>
     <id>https://example.com/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/</id>
     <published>2022-11-22T12:55:24.000Z</published>
-    <updated>2022-11-22T12:57:33.281Z</updated>
+    <updated>2022-11-22T13:04:32.547Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p><p><img src="https://img-blog.csdn.net/20180804161629600?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p><img src="https://img-blog.csdn.net/20180804161655395?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p><p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210406442.png" alt="image-20221122210406442"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210426827.png" alt="image-20221122210426827"></p><p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>]]></content>
     
     
       

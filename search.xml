@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>创建新文章</title>
+    <url>/2022/11/20/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="打开git-bash"><a href="#打开git-bash" class="headerlink" title="打开git-bash"></a>打开git-bash</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n yourname</span><br></pre></td></tr></table></figure>
+
+<p>yourname是你的文章的名字，然后回车<br>然后就可以在hexo/blog/source/_posts中看见自己新建的文章了<br>然后我们hexo s开启本地链接<br>打开自己的blog就可以看见自己的文章了<br>然后通过sublime进入这个文章，前面的title还可以自己更改，tags可以添加自己的标签，分类也可以自己分类</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo-next主题-博客搭建</span><br><span class="line">date: 2020-02-14 13:49:27</span><br><span class="line">tags:</span><br><span class="line">	- 生活</span><br><span class="line">	- 学习</span><br><span class="line"></span><br><span class="line">categories: 我的大学生活</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>建议用vim命令修改，因为typora编码问题，会导致字符编码发生变化而导致错误。</p>
+<p>在—下面就可以进行自己的主文编辑了<br>其中#后跟的是一级标题，##后跟的是二级标题，###跟的是三级标题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 我的大学生活</span><br><span class="line">## 第一篇博客</span><br><span class="line">### 这个是三级标题</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221120145703537.png" alt="image-20221120145703537"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>删除文章</title>
     <url>/2022/11/20/%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="Hexo彻底删除文章"><a href="#Hexo彻底删除文章" class="headerlink" title="Hexo彻底删除文章"></a>Hexo彻底删除文章</h1><h2 id="普通删除方式"><a href="#普通删除方式" class="headerlink" title="普通删除方式"></a>普通删除方式</h2><p>Hexo正常删除文章的流程是先删除本地文件。</p>
@@ -32,26 +52,6 @@
       <tags>
         <tag>hexo删除文章</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>创建新文章</title>
-    <url>/2022/11/20/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="打开git-bash"><a href="#打开git-bash" class="headerlink" title="打开git-bash"></a>打开git-bash</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n yourname</span><br></pre></td></tr></table></figure>
-
-<p>yourname是你的文章的名字，然后回车<br>然后就可以在hexo/blog/source/_posts中看见自己新建的文章了<br>然后我们hexo s开启本地链接<br>打开自己的blog就可以看见自己的文章了<br>然后通过sublime进入这个文章，前面的title还可以自己更改，tags可以添加自己的标签，分类也可以自己分类</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo-next主题-博客搭建</span><br><span class="line">date: 2020-02-14 13:49:27</span><br><span class="line">tags:</span><br><span class="line">	- 生活</span><br><span class="line">	- 学习</span><br><span class="line"></span><br><span class="line">categories: 我的大学生活</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>建议用vim命令修改，因为typora编码问题，会导致字符编码发生变化而导致错误。</p>
-<p>在—下面就可以进行自己的主文编辑了<br>其中#后跟的是一级标题，##后跟的是二级标题，###跟的是三级标题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 我的大学生活</span><br><span class="line">## 第一篇博客</span><br><span class="line">### 这个是三级标题</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221120145703537.png" alt="image-20221120145703537"></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
   </entry>
   <entry>
     <title>添加鼠标右键菜单项</title>
@@ -102,8 +102,8 @@
     <title>解决配置正确虚拟机与主机ping不通</title>
     <url>/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/</url>
     <content><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p>
-<p><img src="https://img-blog.csdn.net/20180804161629600?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><img src="https://img-blog.csdn.net/20180804161655395?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JvYl82NjY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210406442.png" alt="image-20221122210406442"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210426827.png" alt="image-20221122210426827"></p>
 <p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>
 ]]></content>
       <categories>
