@@ -67,6 +67,8 @@
 <p>举例我的Icon 添加值为:(需要实际修改成实际安装路径)</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <p>2.添加 command 项,并添加值.</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/5551011e2319da579da14075cc116765.png" alt="image-20201216165254826"></p>
 <p><strong>2.设置右键文件夹背景空白处打开 IDEA</strong><br>设置和前面 1 类似, 但注册表位置改为 :</p>
