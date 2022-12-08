@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2022-11-28T04:12:17.639Z</updated>
+  <updated>2022-12-08T10:21:54.935Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NAT总结</title>
+    <link href="https://example.com/2022/12/08/NAT%E6%80%BB%E7%BB%93/"/>
+    <id>https://example.com/2022/12/08/NAT%E6%80%BB%E7%BB%93/</id>
+    <published>2022-12-08T10:20:41.000Z</published>
+    <updated>2022-12-08T10:21:54.935Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Basic-NAT"><a href="#Basic-NAT" class="headerlink" title="Basic NAT"></a>Basic NAT</h2><p>Basic NAT实现私网地址与公网地址一对一转换</p><h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208174842241.png" alt="image-20221208174842241"></p><h3 id="配置Basic-NAT"><a href="#配置Basic-NAT" class="headerlink" title="配置Basic NAT"></a>配置Basic NAT</h3><ul><li><p>配置ACL</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li><li><p>配置地址池</p><p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p><p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong></p></li><li><p>配置地址转换</p><p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number no-pat</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">no-pat的作用是不做端口转换，只作IP地址转换。</span><br></pre></td></tr></table></figure></li></ul><span id="more"></span><h3 id="解析图"><a href="#解析图" class="headerlink" title="解析图:"></a>解析图:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175706066.png" alt="image-20221208175706066"></p><hr><h2 id="NAPT"><a href="#NAPT" class="headerlink" title="NAPT"></a>NAPT</h2><p>NAPT实现私网地址与公网地址多对一转换</p><h3 id="配置示例-1"><a href="#配置示例-1" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175811136.png" alt="image-20221208175811136"></p><h3 id="配置NAPT"><a href="#配置NAPT" class="headerlink" title="配置NAPT:"></a>配置NAPT:</h3><ul><li><p>配置ACL</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li><li><p>配置地址池</p><p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p><p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong>  (备注：<em><strong>start-address* 与 *end-address</strong></em> 相等)</p></li><li><p>配置地址转换</p><p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number</strong></p><h3 id="解析图："><a href="#解析图：" class="headerlink" title="解析图："></a>解析图：</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180253623.png" alt="image-20221208180253623"></p></li></ul><hr><h2 id="Easy-IP"><a href="#Easy-IP" class="headerlink" title="Easy IP"></a>Easy IP</h2><p>Easy IP适用于出接口地址无法预知的场合</p><h4 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h4><ul><li><p>NAT设备直接使用出接口的IP地址作为转换后的源地址</p></li><li><p>不用预先配置地址池</p></li><li><p>工作原理与普通NAPT相同，是NAPT的一种特例</p></li><li><p>适用于拨号接入Internet或动态获得IP地址的场合</p><h3 id="配置示例-2"><a href="#配置示例-2" class="headerlink" title="配置示例:"></a>配置示例:</h3></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180646352.png" alt="image-20221208180646352"></p><h3 id="配置Easy-IP"><a href="#配置Easy-IP" class="headerlink" title="配置Easy IP"></a>配置Easy IP</h3><ul><li><p>配置ACL</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li><li><p>配置地址转换</p><p><strong>-&gt;</strong> <strong>nat outbound <em>acl-number</em></strong></p></li></ul><hr><h2 id="NAT-Server"><a href="#NAT-Server" class="headerlink" title="NAT Server"></a>NAT Server</h2><p>NAT Server使公网主机可以主动连接私网服务器获取服务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">想让Server端能够ping通Client_A，以便Client_A对外提供ICMP服务，在RTA上为Client_A静态映射公网地址和协议端口，公网地址为198.76.28.11</span><br></pre></td></tr></table></figure><h3 id="配置示例："><a href="#配置示例：" class="headerlink" title="配置示例："></a>配置示例：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181019392.png" alt="image-20221208181019392"></p><pre><code>###     配置NAT Server：</code></pre><ul><li><p>​        NAT Server配置命令</p><p><strong>-&gt;</strong> nat server protocol <em>pro-type</em> <strong>global</strong> <em>global-addr</em><em>[global-port]</em> <strong>inside</strong> <em>host-addr[host-port]</em></p></li></ul><h3 id="解析图：-1"><a href="#解析图：-1" class="headerlink" title="解析图："></a>解析图：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181416412.png" alt="image-20221208181416412"></p><hr><h2 id="NAT的信息显示和调试"><a href="#NAT的信息显示和调试" class="headerlink" title="NAT的信息显示和调试"></a>NAT的信息显示和调试</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181936695.png" alt="image-20221208181936695"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Basic-NAT&quot;&gt;&lt;a href=&quot;#Basic-NAT&quot; class=&quot;headerlink&quot; title=&quot;Basic NAT&quot;&gt;&lt;/a&gt;Basic NAT&lt;/h2&gt;&lt;p&gt;Basic NAT实现私网地址与公网地址一对一转换&lt;/p&gt;
+&lt;h3 id=&quot;配置示例&quot;&gt;&lt;a href=&quot;#配置示例&quot; class=&quot;headerlink&quot; title=&quot;配置示例:&quot;&gt;&lt;/a&gt;配置示例:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208174842241.png&quot; alt=&quot;image-20221208174842241&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;配置Basic-NAT&quot;&gt;&lt;a href=&quot;#配置Basic-NAT&quot; class=&quot;headerlink&quot; title=&quot;配置Basic NAT&quot;&gt;&lt;/a&gt;配置Basic NAT&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;配置ACL&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; 用于判断哪些数据包的地址应被转换&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置地址池&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&amp;gt;&lt;/strong&gt; &lt;strong&gt;nat address-group &lt;em&gt;group-number&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&amp;gt;&lt;/strong&gt; &lt;strong&gt;address &lt;em&gt;start-address&lt;/em&gt; &lt;em&gt;end-address&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置地址转换&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&amp;gt;&lt;/strong&gt; &lt;strong&gt;nat outbound acl-number address-group group-number no-pat&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;no-pat的作用是不做端口转换，只作IP地址转换。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="期末复习" scheme="https://example.com/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="期末复习" scheme="https://example.com/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>人工智能作业</title>
