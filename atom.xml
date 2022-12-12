@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2022-12-08T10:23:37.059Z</updated>
+  <updated>2022-12-12T12:26:42.522Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rip</title>
+    <link href="https://example.com/2022/12/12/rip/"/>
+    <id>https://example.com/2022/12/12/rip/</id>
+    <published>2022-12-12T12:25:50.000Z</published>
+    <updated>2022-12-12T12:26:42.522Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195327291.png" alt="image-20221212195327291"></p><hr><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195615876.png" alt="image-20221212195615876"></p><span id="more"></span><h3 id="路由更新"><a href="#路由更新" class="headerlink" title="路由更新"></a>路由更新</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195712575.png" alt="image-20221212195712575"></p><hr><h3 id="拓扑变化在网络中扩散"><a href="#拓扑变化在网络中扩散" class="headerlink" title="拓扑变化在网络中扩散"></a>拓扑变化在网络中扩散</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195828828.png" alt="image-20221212195828828"></p><hr><h3 id="环路形成原因"><a href="#环路形成原因" class="headerlink" title="环路形成原因"></a>环路形成原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200014282.png" alt="image-20221212200014282"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200039721.png" alt="image-20221212200039721"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200101014.png" alt="image-20221212200101014"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200124752.png" alt="image-20221212200124752"></p><hr><h3 id="防环机制"><a href="#防环机制" class="headerlink" title="防环机制"></a>防环机制</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195926934.png" alt="image-20221212195926934"></p><ul><li><h4 id="路由毒化"><a href="#路由毒化" class="headerlink" title="路由毒化"></a>路由毒化</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200236367.png" alt="image-20221212200236367"></p><ul><li><h4 id="水平分割"><a href="#水平分割" class="headerlink" title="水平分割"></a>水平分割</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200303788.png" alt="image-20221212200303788"></p><ul><li><h4 id="毒性逆转"><a href="#毒性逆转" class="headerlink" title="毒性逆转"></a>毒性逆转</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200347071.png" alt="image-20221212200347071"></p><hr><h3 id="多路径环路产生原因"><a href="#多路径环路产生原因" class="headerlink" title="多路径环路产生原因"></a>多路径环路产生原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200438528.png" alt="image-20221212200438528"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200452835.png" alt="image-20221212200452835"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200508173.png" alt="image-20221212200508173"></p><hr><ul><li><h4 id="定义最大值"><a href="#定义最大值" class="headerlink" title="定义最大值"></a>定义最大值</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200552658.png" alt="image-20221212200552658"></p><ul><li><h4 id="抑制时间"><a href="#抑制时间" class="headerlink" title="抑制时间"></a>抑制时间</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200633865.png" alt="image-20221212200633865"></p><ul><li><h4 id="触发更新"><a href="#触发更新" class="headerlink" title="触发更新"></a>触发更新</h4></li></ul><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200754221.png" alt="image-20221212200754221"></p><hr><h2 id="RIPv1和RIPv2"><a href="#RIPv1和RIPv2" class="headerlink" title="RIPv1和RIPv2"></a>RIPv1和RIPv2</h2><h4 id="RIPv1缺点"><a href="#RIPv1缺点" class="headerlink" title="RIPv1缺点"></a>RIPv1缺点</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201016907.png" alt="image-20221212201016907"></p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201119720.png" alt="image-20221212201119720"></p><hr><h4 id="RIPv2改进"><a href="#RIPv2改进" class="headerlink" title="RIPv2改进"></a>RIPv2改进</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201225347.png" alt="image-20221212201225347"></p><hr><h2 id="RIP配置命令"><a href="#RIP配置命令" class="headerlink" title="RIP配置命令"></a>RIP配置命令</h2><ul><li><p>创建RIP进程并进入RIP视图</p><p>[h3c] rip <em>[process-id]</em></p></li><li><p>在指定网段接口上使能RIP</p><p>[h3c-rip-1] network <em>ip</em></p></li><li><p>配置接口工作在抑制状态</p><p>[h3c-rip-1] silent-interface <em>[interface-number | all]</em></p></li><li><p>使能RIP水平分割功能</p><p>[h3c-Ethernet1/0] rip split-horizon</p></li><li><p>使能RIP毒性逆转功能</p><p>[h3c-Ethernet1/0] rip poison-reverse</p></li></ul><p> 示例：</p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202138137.png" alt="image-20221212202138137"></p><h4 id="RIPv2"><a href="#RIPv2" class="headerlink" title="RIPv2"></a>RIPv2</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202222163.png" alt="image-20221212202222163"></p><p>示例：</p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202235267.png" alt="image-20221212202235267"></p><ul><li><p>显示RIP运行状态及配置信息</p><p><h3c>dis rip</p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202329628.png" alt="image-20221212202329628"></p></li><li><p>查看rip的debugging信息</p><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202418989.png" alt="image-20221212202418989"></p></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;基本知识&quot;&gt;&lt;a href=&quot;#基本知识&quot; class=&quot;headerlink&quot; title=&quot;基本知识&quot;&gt;&lt;/a&gt;基本知识&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195327291.png&quot; alt=&quot;image-20221212195327291&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195615876.png&quot; alt=&quot;image-20221212195615876&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="路由交换总结" scheme="https://example.com/categories/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="期末复习" scheme="https://example.com/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>NAT总结</title>
