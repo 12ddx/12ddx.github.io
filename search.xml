@@ -78,6 +78,98 @@
       </tags>
   </entry>
   <entry>
+    <title>rip</title>
+    <url>/2022/12/12/rip/</url>
+    <content><![CDATA[<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195327291.png" alt="image-20221212195327291"></p>
+<hr>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195615876.png" alt="image-20221212195615876"></p>
+<span id="more"></span>
+
+<h3 id="路由更新"><a href="#路由更新" class="headerlink" title="路由更新"></a>路由更新</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195712575.png" alt="image-20221212195712575"></p>
+<hr>
+<h3 id="拓扑变化在网络中扩散"><a href="#拓扑变化在网络中扩散" class="headerlink" title="拓扑变化在网络中扩散"></a>拓扑变化在网络中扩散</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195828828.png" alt="image-20221212195828828"></p>
+<hr>
+<h3 id="环路形成原因"><a href="#环路形成原因" class="headerlink" title="环路形成原因"></a>环路形成原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200014282.png" alt="image-20221212200014282"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200039721.png" alt="image-20221212200039721"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200101014.png" alt="image-20221212200101014"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200124752.png" alt="image-20221212200124752"></p>
+<hr>
+<h3 id="防环机制"><a href="#防环机制" class="headerlink" title="防环机制"></a>防环机制</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195926934.png" alt="image-20221212195926934"></p>
+<ul>
+<li><h4 id="路由毒化"><a href="#路由毒化" class="headerlink" title="路由毒化"></a>路由毒化</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200236367.png" alt="image-20221212200236367"></p>
+<ul>
+<li><h4 id="水平分割"><a href="#水平分割" class="headerlink" title="水平分割"></a>水平分割</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200303788.png" alt="image-20221212200303788"></p>
+<ul>
+<li><h4 id="毒性逆转"><a href="#毒性逆转" class="headerlink" title="毒性逆转"></a>毒性逆转</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200347071.png" alt="image-20221212200347071"></p>
+<hr>
+<h3 id="多路径环路产生原因"><a href="#多路径环路产生原因" class="headerlink" title="多路径环路产生原因"></a>多路径环路产生原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200438528.png" alt="image-20221212200438528"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200452835.png" alt="image-20221212200452835"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200508173.png" alt="image-20221212200508173"></p>
+<hr>
+<ul>
+<li><h4 id="定义最大值"><a href="#定义最大值" class="headerlink" title="定义最大值"></a>定义最大值</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200552658.png" alt="image-20221212200552658"></p>
+<ul>
+<li><h4 id="抑制时间"><a href="#抑制时间" class="headerlink" title="抑制时间"></a>抑制时间</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200633865.png" alt="image-20221212200633865"></p>
+<ul>
+<li><h4 id="触发更新"><a href="#触发更新" class="headerlink" title="触发更新"></a>触发更新</h4></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200754221.png" alt="image-20221212200754221"></p>
+<hr>
+<h2 id="RIPv1和RIPv2"><a href="#RIPv1和RIPv2" class="headerlink" title="RIPv1和RIPv2"></a>RIPv1和RIPv2</h2><h4 id="RIPv1缺点"><a href="#RIPv1缺点" class="headerlink" title="RIPv1缺点"></a>RIPv1缺点</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201016907.png" alt="image-20221212201016907"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201119720.png" alt="image-20221212201119720"></p>
+<hr>
+<h4 id="RIPv2改进"><a href="#RIPv2改进" class="headerlink" title="RIPv2改进"></a>RIPv2改进</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201225347.png" alt="image-20221212201225347"></p>
+<hr>
+<h2 id="RIP配置命令"><a href="#RIP配置命令" class="headerlink" title="RIP配置命令"></a>RIP配置命令</h2><ul>
+<li><p>创建RIP进程并进入RIP视图</p>
+<p>[h3c] rip <em>[process-id]</em></p>
+</li>
+<li><p>在指定网段接口上使能RIP</p>
+<p>[h3c-rip-1] network <em>ip</em></p>
+</li>
+<li><p>配置接口工作在抑制状态</p>
+<p>[h3c-rip-1] silent-interface <em>[interface-number | all]</em></p>
+</li>
+<li><p>使能RIP水平分割功能</p>
+<p>[h3c-Ethernet1/0] rip split-horizon</p>
+</li>
+<li><p>使能RIP毒性逆转功能</p>
+<p>[h3c-Ethernet1/0] rip poison-reverse</p>
+</li>
+</ul>
+<p> 示例：</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202138137.png" alt="image-20221212202138137"></p>
+<h4 id="RIPv2"><a href="#RIPv2" class="headerlink" title="RIPv2"></a>RIPv2</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202222163.png" alt="image-20221212202222163"></p>
+<p>示例：</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202235267.png" alt="image-20221212202235267"></p>
+<ul>
+<li><p>显示RIP运行状态及配置信息</p>
+<p><h3c>dis rip</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202329628.png" alt="image-20221212202329628"></p>
+</li>
+<li><p>查看rip的debugging信息</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202418989.png" alt="image-20221212202418989"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>路由交换总结</category>
+      </categories>
+      <tags>
+        <tag>期末复习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>人工智能作业</title>
     <url>/2022/11/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A/</url>
     <content><![CDATA[<h1 id="第二章作业-1"><a href="#第二章作业-1" class="headerlink" title="第二章作业-1"></a>第二章作业-1</h1><h2 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpic2.1.jpg" alt="2.1"></p>
@@ -137,6 +229,47 @@
       <categories>
         <category>hexo</category>
       </categories>
+  </entry>
+  <entry>
+    <title>操作系统应用题</title>
+    <url>/2022/12/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218200807575.png" alt="image-20221218200807575"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218200831251.png" alt="image-20221218200831251"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">由于T0时刻存在安全序列&#123;P1, P3, P4, P2, P0&#125;,故此时系统是安全的。</span><br></pre></td></tr></table></figure>
+
+<p>当P1请求资源：<strong>Request</strong>（1,0,2）</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201017476.png" alt="image-20221218201017476"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201051105.png" alt="image-20221218201051105"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">由于此时存在安全序列&#123;P1, P3, P4, P2, P0&#125;,故此时系统是安全的。</span><br></pre></td></tr></table></figure>
+
+<p>当P0请求资源：Request(0,2,0)</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201250031.png" alt="image-20221218201250031"></p>
+<hr>
+<h2 id="信号量同步互斥问题"><a href="#信号量同步互斥问题" class="headerlink" title="信号量同步互斥问题"></a>信号量同步互斥问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一家四人父、母、儿子、女儿围桌而坐；桌上有一个水果盘； 当水果盘空时，父亲可以放香蕉或者母亲可以放苹果，但盘中已有水果时，就不能放，父母等待。当盘中有香蕉时，女儿可吃香蕉，否则，女儿等待；当盘中有苹果时，儿子可吃，否则，儿子等待。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201636074.png" alt="image-20221218201636074"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201704072.png" alt="image-20221218201704072"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在公共汽车上，司机和售票员的活动分别是：</span><br><span class="line"></span><br><span class="line">司机的活动：　　启动车辆</span><br><span class="line"></span><br><span class="line">　　　　　　　　正常运行</span><br><span class="line"></span><br><span class="line">　　　　　　　　到站停车</span><br><span class="line"></span><br><span class="line">售票员的活动：　关车门</span><br><span class="line"></span><br><span class="line">　　　　　　　　售票</span><br><span class="line"></span><br><span class="line">　　　　　　　　开车门</span><br><span class="line"></span><br><span class="line">在汽车不断的到站、停车和行驶过程中，司机和售票员的活动有什么同步关系？用信号量和Ｐ，Ｖ操作实现。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201745433.png" alt="image-20221218201745433"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">有一个超市，最多可容纳N个人进入购物，当N个顾客满员时，后到的顾客在超市外等待；超市中只有一个收银员。可以把顾客和收银员看作两类进程，两类进程间存在同步关系。写出用P、V操作实现的两类进程的算法。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201826020.png" alt="image-20221218201826020"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218201854254.png" alt="image-20221218201854254"></p>
+<hr>
+<h2 id="调度算法题"><a href="#调度算法题" class="headerlink" title="调度算法题"></a>调度算法题</h2><p>讲解：</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218202931788.png" alt="image-20221218202931788"></p>
+<p>习题：</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221218202140636.png" alt="image-20221218202140636"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">解析：</span><br><span class="line">	最高优先级优先调度,同时到达先运行作业2,运行5个时间单位结束,作业2的周转时间为5,接着运行作业4,运行3个时间单位结束,作业4周转时间为（5+3）=8再运行作业1,作业1周转时间为（5+3+2）=10最后运行作业3,周转时间为（5+3+2+8）=18所以结果为（5+8+10+18）/4=10.25</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>操作系统总结</category>
+      </categories>
+      <tags>
+        <tag>期末复习</tag>
+      </tags>
   </entry>
   <entry>
     <title>删除文章</title>
@@ -232,98 +365,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>rip</title>
-    <url>/2022/12/12/rip/</url>
-    <content><![CDATA[<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195327291.png" alt="image-20221212195327291"></p>
-<hr>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195615876.png" alt="image-20221212195615876"></p>
-<span id="more"></span>
-
-<h3 id="路由更新"><a href="#路由更新" class="headerlink" title="路由更新"></a>路由更新</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195712575.png" alt="image-20221212195712575"></p>
-<hr>
-<h3 id="拓扑变化在网络中扩散"><a href="#拓扑变化在网络中扩散" class="headerlink" title="拓扑变化在网络中扩散"></a>拓扑变化在网络中扩散</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195828828.png" alt="image-20221212195828828"></p>
-<hr>
-<h3 id="环路形成原因"><a href="#环路形成原因" class="headerlink" title="环路形成原因"></a>环路形成原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200014282.png" alt="image-20221212200014282"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200039721.png" alt="image-20221212200039721"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200101014.png" alt="image-20221212200101014"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200124752.png" alt="image-20221212200124752"></p>
-<hr>
-<h3 id="防环机制"><a href="#防环机制" class="headerlink" title="防环机制"></a>防环机制</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195926934.png" alt="image-20221212195926934"></p>
-<ul>
-<li><h4 id="路由毒化"><a href="#路由毒化" class="headerlink" title="路由毒化"></a>路由毒化</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200236367.png" alt="image-20221212200236367"></p>
-<ul>
-<li><h4 id="水平分割"><a href="#水平分割" class="headerlink" title="水平分割"></a>水平分割</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200303788.png" alt="image-20221212200303788"></p>
-<ul>
-<li><h4 id="毒性逆转"><a href="#毒性逆转" class="headerlink" title="毒性逆转"></a>毒性逆转</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200347071.png" alt="image-20221212200347071"></p>
-<hr>
-<h3 id="多路径环路产生原因"><a href="#多路径环路产生原因" class="headerlink" title="多路径环路产生原因"></a>多路径环路产生原因</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200438528.png" alt="image-20221212200438528"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200452835.png" alt="image-20221212200452835"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200508173.png" alt="image-20221212200508173"></p>
-<hr>
-<ul>
-<li><h4 id="定义最大值"><a href="#定义最大值" class="headerlink" title="定义最大值"></a>定义最大值</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200552658.png" alt="image-20221212200552658"></p>
-<ul>
-<li><h4 id="抑制时间"><a href="#抑制时间" class="headerlink" title="抑制时间"></a>抑制时间</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200633865.png" alt="image-20221212200633865"></p>
-<ul>
-<li><h4 id="触发更新"><a href="#触发更新" class="headerlink" title="触发更新"></a>触发更新</h4></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212200754221.png" alt="image-20221212200754221"></p>
-<hr>
-<h2 id="RIPv1和RIPv2"><a href="#RIPv1和RIPv2" class="headerlink" title="RIPv1和RIPv2"></a>RIPv1和RIPv2</h2><h4 id="RIPv1缺点"><a href="#RIPv1缺点" class="headerlink" title="RIPv1缺点"></a>RIPv1缺点</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201016907.png" alt="image-20221212201016907"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201119720.png" alt="image-20221212201119720"></p>
-<hr>
-<h4 id="RIPv2改进"><a href="#RIPv2改进" class="headerlink" title="RIPv2改进"></a>RIPv2改进</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212201225347.png" alt="image-20221212201225347"></p>
-<hr>
-<h2 id="RIP配置命令"><a href="#RIP配置命令" class="headerlink" title="RIP配置命令"></a>RIP配置命令</h2><ul>
-<li><p>创建RIP进程并进入RIP视图</p>
-<p>[h3c] rip <em>[process-id]</em></p>
-</li>
-<li><p>在指定网段接口上使能RIP</p>
-<p>[h3c-rip-1] network <em>ip</em></p>
-</li>
-<li><p>配置接口工作在抑制状态</p>
-<p>[h3c-rip-1] silent-interface <em>[interface-number | all]</em></p>
-</li>
-<li><p>使能RIP水平分割功能</p>
-<p>[h3c-Ethernet1/0] rip split-horizon</p>
-</li>
-<li><p>使能RIP毒性逆转功能</p>
-<p>[h3c-Ethernet1/0] rip poison-reverse</p>
-</li>
-</ul>
-<p> 示例：</p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202138137.png" alt="image-20221212202138137"></p>
-<h4 id="RIPv2"><a href="#RIPv2" class="headerlink" title="RIPv2"></a>RIPv2</h4><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202222163.png" alt="image-20221212202222163"></p>
-<p>示例：</p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202235267.png" alt="image-20221212202235267"></p>
-<ul>
-<li><p>显示RIP运行状态及配置信息</p>
-<p><h3c>dis rip</p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202329628.png" alt="image-20221212202329628"></p>
-</li>
-<li><p>查看rip的debugging信息</p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212202418989.png" alt="image-20221212202418989"></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>路由交换总结</category>
-      </categories>
-      <tags>
-        <tag>期末复习</tag>
       </tags>
   </entry>
 </search>
