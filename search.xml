@@ -1,83 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>NAT总结</title>
-    <url>/2022/12/08/NAT%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h2 id="Basic-NAT"><a href="#Basic-NAT" class="headerlink" title="Basic NAT"></a>Basic NAT</h2><p>Basic NAT实现私网地址与公网地址一对一转换</p>
-<h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208174842241.png" alt="image-20221208174842241"></p>
-<h3 id="配置Basic-NAT"><a href="#配置Basic-NAT" class="headerlink" title="配置Basic NAT"></a>配置Basic NAT</h3><ul>
-<li><p>配置ACL</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
-<li><p>配置地址池</p>
-<p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p>
-<p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong></p>
-</li>
-<li><p>配置地址转换</p>
-<p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number no-pat</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">no-pat的作用是不做端口转换，只作IP地址转换。</span><br></pre></td></tr></table></figure></li>
-</ul>
-<span id="more"></span>
-
-<h3 id="解析图"><a href="#解析图" class="headerlink" title="解析图:"></a>解析图:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175706066.png" alt="image-20221208175706066"></p>
-<hr>
-<h2 id="NAPT"><a href="#NAPT" class="headerlink" title="NAPT"></a>NAPT</h2><p>NAPT实现私网地址与公网地址多对一转换</p>
-<h3 id="配置示例-1"><a href="#配置示例-1" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175811136.png" alt="image-20221208175811136"></p>
-<h3 id="配置NAPT"><a href="#配置NAPT" class="headerlink" title="配置NAPT:"></a>配置NAPT:</h3><ul>
-<li><p>配置ACL</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
-<li><p>配置地址池</p>
-<p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p>
-<p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong>  (备注：<em><strong>start-address* 与 *end-address</strong></em> 相等)</p>
-</li>
-<li><p>配置地址转换</p>
-<p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number</strong></p>
-<h3 id="解析图："><a href="#解析图：" class="headerlink" title="解析图："></a>解析图：</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180253623.png" alt="image-20221208180253623"></p>
-</li>
-</ul>
-<hr>
-<h2 id="Easy-IP"><a href="#Easy-IP" class="headerlink" title="Easy IP"></a>Easy IP</h2><p>Easy IP适用于出接口地址无法预知的场合</p>
-<h4 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h4><ul>
-<li><p>NAT设备直接使用出接口的IP地址作为转换后的源地址</p>
-</li>
-<li><p>不用预先配置地址池</p>
-</li>
-<li><p>工作原理与普通NAPT相同，是NAPT的一种特例</p>
-</li>
-<li><p>适用于拨号接入Internet或动态获得IP地址的场合</p>
-<h3 id="配置示例-2"><a href="#配置示例-2" class="headerlink" title="配置示例:"></a>配置示例:</h3></li>
-</ul>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180646352.png" alt="image-20221208180646352"></p>
-<h3 id="配置Easy-IP"><a href="#配置Easy-IP" class="headerlink" title="配置Easy IP"></a>配置Easy IP</h3><ul>
-<li><p>配置ACL</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
-<li><p>配置地址转换</p>
-<p><strong>-&gt;</strong> <strong>nat outbound <em>acl-number</em></strong></p>
-</li>
-</ul>
-<hr>
-<h2 id="NAT-Server"><a href="#NAT-Server" class="headerlink" title="NAT Server"></a>NAT Server</h2><p>NAT Server使公网主机可以主动连接私网服务器获取服务</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">想让Server端能够ping通Client_A，以便Client_A对外提供ICMP服务，在RTA上为Client_A静态映射公网地址和协议端口，公网地址为198.76.28.11</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置示例："><a href="#配置示例：" class="headerlink" title="配置示例："></a>配置示例：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181019392.png" alt="image-20221208181019392"></p>
-<pre><code>###     配置NAT Server：
-</code></pre>
-<ul>
-<li><p>​        NAT Server配置命令</p>
-<p><strong>-&gt;</strong> nat server protocol <em>pro-type</em> <strong>global</strong> <em>global-addr</em><em>[global-port]</em> <strong>inside</strong> <em>host-addr[host-port]</em></p>
-</li>
-</ul>
-<h3 id="解析图：-1"><a href="#解析图：-1" class="headerlink" title="解析图："></a>解析图：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181416412.png" alt="image-20221208181416412"></p>
-<hr>
-<h2 id="NAT的信息显示和调试"><a href="#NAT的信息显示和调试" class="headerlink" title="NAT的信息显示和调试"></a>NAT的信息显示和调试</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181936695.png" alt="image-20221208181936695"></p>
-]]></content>
-      <categories>
-        <category>路由交换总结</category>
-      </categories>
-      <tags>
-        <tag>期末复习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>rip</title>
     <url>/2022/12/12/rip/</url>
     <content><![CDATA[<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221212195327291.png" alt="image-20221212195327291"></p>
@@ -170,6 +93,83 @@
       </tags>
   </entry>
   <entry>
+    <title>NAT总结</title>
+    <url>/2022/12/08/NAT%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h2 id="Basic-NAT"><a href="#Basic-NAT" class="headerlink" title="Basic NAT"></a>Basic NAT</h2><p>Basic NAT实现私网地址与公网地址一对一转换</p>
+<h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208174842241.png" alt="image-20221208174842241"></p>
+<h3 id="配置Basic-NAT"><a href="#配置Basic-NAT" class="headerlink" title="配置Basic NAT"></a>配置Basic NAT</h3><ul>
+<li><p>配置ACL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
+<li><p>配置地址池</p>
+<p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p>
+<p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong></p>
+</li>
+<li><p>配置地址转换</p>
+<p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number no-pat</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">no-pat的作用是不做端口转换，只作IP地址转换。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<span id="more"></span>
+
+<h3 id="解析图"><a href="#解析图" class="headerlink" title="解析图:"></a>解析图:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175706066.png" alt="image-20221208175706066"></p>
+<hr>
+<h2 id="NAPT"><a href="#NAPT" class="headerlink" title="NAPT"></a>NAPT</h2><p>NAPT实现私网地址与公网地址多对一转换</p>
+<h3 id="配置示例-1"><a href="#配置示例-1" class="headerlink" title="配置示例:"></a>配置示例:</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208175811136.png" alt="image-20221208175811136"></p>
+<h3 id="配置NAPT"><a href="#配置NAPT" class="headerlink" title="配置NAPT:"></a>配置NAPT:</h3><ul>
+<li><p>配置ACL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
+<li><p>配置地址池</p>
+<p><strong>-&gt;</strong> <strong>nat address-group <em>group-number</em></strong></p>
+<p><strong>-&gt;</strong> <strong>address <em>start-address</em> <em>end-address</em></strong>  (备注：<em><strong>start-address* 与 *end-address</strong></em> 相等)</p>
+</li>
+<li><p>配置地址转换</p>
+<p><strong>-&gt;</strong> <strong>nat outbound acl-number address-group group-number</strong></p>
+<h3 id="解析图："><a href="#解析图：" class="headerlink" title="解析图："></a>解析图：</h3><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180253623.png" alt="image-20221208180253623"></p>
+</li>
+</ul>
+<hr>
+<h2 id="Easy-IP"><a href="#Easy-IP" class="headerlink" title="Easy IP"></a>Easy IP</h2><p>Easy IP适用于出接口地址无法预知的场合</p>
+<h4 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h4><ul>
+<li><p>NAT设备直接使用出接口的IP地址作为转换后的源地址</p>
+</li>
+<li><p>不用预先配置地址池</p>
+</li>
+<li><p>工作原理与普通NAPT相同，是NAPT的一种特例</p>
+</li>
+<li><p>适用于拨号接入Internet或动态获得IP地址的场合</p>
+<h3 id="配置示例-2"><a href="#配置示例-2" class="headerlink" title="配置示例:"></a>配置示例:</h3></li>
+</ul>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208180646352.png" alt="image-20221208180646352"></p>
+<h3 id="配置Easy-IP"><a href="#配置Easy-IP" class="headerlink" title="配置Easy IP"></a>配置Easy IP</h3><ul>
+<li><p>配置ACL</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-&gt; 用于判断哪些数据包的地址应被转换</span><br><span class="line"></span><br><span class="line">-&gt; 被ACL允许（permit）的报文将被进行NAT转换，被拒绝（deny）的报文将不会被转换</span><br></pre></td></tr></table></figure></li>
+<li><p>配置地址转换</p>
+<p><strong>-&gt;</strong> <strong>nat outbound <em>acl-number</em></strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="NAT-Server"><a href="#NAT-Server" class="headerlink" title="NAT Server"></a>NAT Server</h2><p>NAT Server使公网主机可以主动连接私网服务器获取服务</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">想让Server端能够ping通Client_A，以便Client_A对外提供ICMP服务，在RTA上为Client_A静态映射公网地址和协议端口，公网地址为198.76.28.11</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置示例："><a href="#配置示例：" class="headerlink" title="配置示例："></a>配置示例：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181019392.png" alt="image-20221208181019392"></p>
+<pre><code>###     配置NAT Server：
+</code></pre>
+<ul>
+<li><p>​        NAT Server配置命令</p>
+<p><strong>-&gt;</strong> nat server protocol <em>pro-type</em> <strong>global</strong> <em>global-addr</em><em>[global-port]</em> <strong>inside</strong> <em>host-addr[host-port]</em></p>
+</li>
+</ul>
+<h3 id="解析图：-1"><a href="#解析图：-1" class="headerlink" title="解析图："></a>解析图：</h3><p>​        <img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181416412.png" alt="image-20221208181416412"></p>
+<hr>
+<h2 id="NAT的信息显示和调试"><a href="#NAT的信息显示和调试" class="headerlink" title="NAT的信息显示和调试"></a>NAT的信息显示和调试</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221208181936695.png" alt="image-20221208181936695"></p>
+]]></content>
+      <categories>
+        <category>路由交换总结</category>
+      </categories>
+      <tags>
+        <tag>期末复习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>人工智能作业</title>
     <url>/2022/11/28/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A/</url>
     <content><![CDATA[<h1 id="第二章作业-1"><a href="#第二章作业-1" class="headerlink" title="第二章作业-1"></a>第二章作业-1</h1><h2 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h2><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpic2.1.jpg" alt="2.1"></p>
@@ -211,26 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title>创建新文章</title>
-    <url>/2022/11/20/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="打开git-bash"><a href="#打开git-bash" class="headerlink" title="打开git-bash"></a>打开git-bash</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n yourname</span><br></pre></td></tr></table></figure>
-
-<p>yourname是你的文章的名字，然后回车<br>然后就可以在hexo/blog/source/_posts中看见自己新建的文章了<br>然后我们hexo s开启本地链接<br>打开自己的blog就可以看见自己的文章了<br>然后通过sublime进入这个文章，前面的title还可以自己更改，tags可以添加自己的标签，分类也可以自己分类</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo-next主题-博客搭建</span><br><span class="line">date: 2020-02-14 13:49:27</span><br><span class="line">tags:</span><br><span class="line">	- 生活</span><br><span class="line">	- 学习</span><br><span class="line"></span><br><span class="line">categories: 我的大学生活</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>建议用vim命令修改，因为typora编码问题，会导致字符编码发生变化而导致错误。</p>
-<p>在—下面就可以进行自己的主文编辑了<br>其中#后跟的是一级标题，##后跟的是二级标题，###跟的是三级标题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 我的大学生活</span><br><span class="line">## 第一篇博客</span><br><span class="line">### 这个是三级标题</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221120145703537.png" alt="image-20221120145703537"></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
     <title>删除文章</title>
     <url>/2022/11/20/%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="Hexo彻底删除文章"><a href="#Hexo彻底删除文章" class="headerlink" title="Hexo彻底删除文章"></a>Hexo彻底删除文章</h1><h2 id="普通删除方式"><a href="#普通删除方式" class="headerlink" title="普通删除方式"></a>普通删除方式</h2><p>Hexo正常删除文章的流程是先删除本地文件。</p>
@@ -262,6 +242,26 @@
       <tags>
         <tag>hexo删除文章</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>创建新文章</title>
+    <url>/2022/11/20/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="打开git-bash"><a href="#打开git-bash" class="headerlink" title="打开git-bash"></a>打开git-bash</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n yourname</span><br></pre></td></tr></table></figure>
+
+<p>yourname是你的文章的名字，然后回车<br>然后就可以在hexo/blog/source/_posts中看见自己新建的文章了<br>然后我们hexo s开启本地链接<br>打开自己的blog就可以看见自己的文章了<br>然后通过sublime进入这个文章，前面的title还可以自己更改，tags可以添加自己的标签，分类也可以自己分类</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo-next主题-博客搭建</span><br><span class="line">date: 2020-02-14 13:49:27</span><br><span class="line">tags:</span><br><span class="line">	- 生活</span><br><span class="line">	- 学习</span><br><span class="line"></span><br><span class="line">categories: 我的大学生活</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>建议用vim命令修改，因为typora编码问题，会导致字符编码发生变化而导致错误。</p>
+<p>在—下面就可以进行自己的主文编辑了<br>其中#后跟的是一级标题，##后跟的是二级标题，###跟的是三级标题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 我的大学生活</span><br><span class="line">## 第一篇博客</span><br><span class="line">### 这个是三级标题</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221120145703537.png" alt="image-20221120145703537"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>添加鼠标右键菜单项</title>
@@ -309,21 +309,6 @@
       </categories>
       <tags>
         <tag>鼠标右键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决配置正确虚拟机与主机ping不通</title>
-    <url>/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/</url>
-    <content><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210406442.png" alt="image-20221122210406442"></p>
-<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210426827.png" alt="image-20221122210426827"></p>
-<p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>
-]]></content>
-      <categories>
-        <category>linux实验</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -379,6 +364,21 @@
       </categories>
       <tags>
         <tag>期末复习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决配置正确虚拟机与主机ping不通</title>
+    <url>/2022/11/22/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E6%AD%A3%E7%A1%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8E%E4%B8%BB%E6%9C%BAping%E4%B8%8D%E9%80%9A/</url>
+    <content><![CDATA[<h1 id="一-VMware设置桥接模式"><a href="#一-VMware设置桥接模式" class="headerlink" title="一.VMware设置桥接模式"></a>一.VMware设置桥接模式</h1><p>1.VMware -&gt; 编辑-&gt;虚拟网络编辑器-&gt;更改设置</p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210406442.png" alt="image-20221122210406442"></p>
+<p><img src="https://pictures-1314256181.cos.ap-chengdu.myqcloud.com/%2Fpicimage-20221122210426827.png" alt="image-20221122210426827"></p>
+<p>适用于已开启桥接模式，主机与虚拟机配置均在同一网段，但ping不通的问题</p>
+]]></content>
+      <categories>
+        <category>linux实验</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
